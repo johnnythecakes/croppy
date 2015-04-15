@@ -1,5 +1,8 @@
 Router.route('/', {
-  name: 'home'
+  name: 'home',
+  subscriptions: function() {
+    Meteor.subscribe('uploads');
+  }
 });
 
 Router.route('/dashboard', {
